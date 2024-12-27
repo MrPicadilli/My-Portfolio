@@ -1,0 +1,33 @@
+---
+import IconAstro from "./IconAstro.astro";
+import IconHtml from "./IconHtml.astro";
+import IconCss from "./IconCss.astro";
+import IconReact from "./IconReact.astro";
+import IconGit from "./IconGit.astro";
+import IconGitHub from "./IconGtiHub.astro";
+import IconUnity from "./IconUnity.astro";
+import IconBlender from "./IconBlender.astro";
+import IconOpenXR from "./IconOpenXR.astro";
+import IconVsCode from "./IconVsCode.astro";
+
+export const ICONS = {
+  html: IconHtml,
+  css: IconCss,
+  react: IconReact,
+  astro: IconAstro,
+  git: IconGit,
+  github: IconGitHub,
+  unity: IconUnity,
+  blender: IconBlender,
+  openxr: IconOpenXR,
+  vscode: IconVsCode,
+  // add new icons here <--
+  // Make sure that when calling the icon the key is the same
+  // "optional" in the IconKeys const file adds the icon key for when you call IconKeys.nameIcon
+  //you can go to https://simpleicons.org/ or https://www.flaticon.com/ or https://uxwing.com/ for color and dl or just copy the code of the svg then create a new file and insert the code 
+};
+
+export function getIconComponent(iconName: string) {
+  return ICONS[iconName] || null;
+}
+---
